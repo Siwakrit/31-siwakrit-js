@@ -16,8 +16,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const productImage = productImageReset.value.trim();
 
         // Validate inputs
-        if (!productName || !productPrice || isNaN(productPrice) || productPrice <= 0 || !validateImageUrl(productImage)) {
+        if (!productName || !productPrice || isNaN(productPrice) || productPrice <= 0 ) {
             return alert("Still Fighting It");
+            // || !validateImageUrl(productImage)
         }
 
         // Create new product object
@@ -41,9 +42,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Validate image URL format
-    function validateImageUrl(url) {
-        return /\.(jpg|jpeg|png|gif)$/i.test(url);
-    }
+    // function validateImageUrl(url) {
+    //     return /\.(jpg|jpeg|png|gif)$/i.test(url);
+    // }
 
     // Show or hide product list
     function checkConditionBg() {
